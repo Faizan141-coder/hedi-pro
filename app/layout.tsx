@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar, { SidebarItem } from "@/components/sidebar";
+import {
+  BarChart3,
+  Boxes,
+  ChevronFirst,
+  LayoutDashboard,
+  LifeBuoy,
+  MoreVertical,
+  Package,
+  Receipt,
+  Settings,
+  UserCircle,
+} from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +29,65 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="bg-white">
+          <div className="text-black flex">
+            <Sidebar>
+              <SidebarItem
+                icon={<LayoutDashboard size={20} />}
+                text="Dashboard"
+                href="/dashboard"
+              />
+              <SidebarItem
+                icon={<BarChart3 size={20} />}
+                text="Statistics"
+                href="/statistics"
+              />
+              <SidebarItem
+                icon={<UserCircle size={20} />}
+                text="Emotions"
+                href="/emotions"
+              />
+              <SidebarItem
+                icon={<Boxes size={20} />}
+                text="Thematiques"
+                href="/thematiques"
+              />
+              <SidebarItem
+                icon={<Package size={20} />}
+                text="Conccurents"
+                href="/conccurents"
+              />
+              <SidebarItem
+                icon={<Receipt size={20} />}
+                text="Sources"
+                href="/sources"
+              />
+              <SidebarItem
+                icon={<Settings size={20} />}
+                text="Evolution"
+                href="/evolution"
+              />
+              <SidebarItem
+                icon={<LifeBuoy size={20} />}
+                text="Cloud 3D"
+                href="/cloud3d"
+              />
+              <SidebarItem
+                icon={<LifeBuoy size={20} />}
+                text="Aide"
+                href="/aide"
+              />
+              <SidebarItem
+                icon={<LifeBuoy size={20} />}
+                text="Support"
+                href="/support"
+              />
+            </Sidebar>
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
