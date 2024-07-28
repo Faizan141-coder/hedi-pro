@@ -7,7 +7,7 @@ const DashboardPage = () => {
     <div className="w-full p-5">
       <div className="flex mt-5 w-full">
         <div className="w-2/3 pr-5">
-          <h1 className="py-2 ml-12 font-normal text-xl">
+          <h1 className="py-2 ml-7 font-normal text-xl">
             Evolution de la note par plateforme
           </h1>
           <EvolutionLineChart />

@@ -30,18 +30,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="bg-white">
+        <main className="bg-white flex">
           <div className="text-black flex">
             <Sidebar>
               <SidebarItem
                 icon={<LayoutDashboard size={20} />}
                 text="Dashboard"
                 href="/dashboard"
-              />
-              <SidebarItem
-                icon={<BarChart3 size={20} />}
-                text="Statistics"
-                href="/statistics"
               />
               <SidebarItem
                 icon={<UserCircle size={20} />}
@@ -84,8 +79,8 @@ export default function RootLayout({
                 href="/support"
               />
             </Sidebar>
-            {children}
           </div>
+          <div className="flex-1 overflow-y-auto text-black">{children}</div>
         </main>
       </body>
     </html>
