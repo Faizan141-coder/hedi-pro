@@ -1,5 +1,8 @@
+import SimpleTreeMap from "@/components/charts/simple-treemap";
 import StackedAreaChart from "@/components/charts/stacked-area-chart";
-import { Star } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Plus, Star } from "lucide-react";
 import React from "react";
 
 const EmotionsPage = () => {
@@ -36,7 +39,8 @@ const EmotionsPage = () => {
               </div>
             </div>
           </div>
-          <StackedAreaChart />
+          {/* <StackedAreaChart /> */}
+          <SimpleTreeMap />
         </div>
         <div className="grid grid-cols-2 gap-5 p-5">
           <div className="space-y-5">
@@ -66,24 +70,81 @@ const EmotionsPage = () => {
           </div>
           <div>
             <h1 className="font-bold text-xl">Les derniers avis: </h1>
-            <div className="p-3">
-              <div className="flex justify-between">
-                <div>
-                  <h1 className="font-semibold">Google</h1>
-                  <p className="text-[#878d98] text-sm">31/05/2024</p>
+            <div className="p-3 space-y-5 h-72 overflow-y-auto">
+              <div>
+                <div className="flex justify-between">
+                  <div>
+                    <h1 className="font-semibold">Google</h1>
+                    <p className="text-muted-foreground text-sm">31/05/2024</p>
+                  </div>
+                  <div className="flex space-x-1 pr-10">
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                  </div>
                 </div>
-                <div className="flex space-x-1 pr-10">
-                  <Star fill="blue" stroke="blue" size={20} />
-                  <Star fill="blue" stroke="blue" size={20} />
-                  <Star fill="blue" stroke="blue" size={20} />
-                  <Star fill="blue" stroke="blue" size={20} />
-                  <Star fill="blue" stroke="blue" size={20} />
-                </div>
+                <p className="mt-3 ">
+                  "Une assurance simple et efficace, å l'écoute de ses clients.
+                  Une équipe trés pro.."
+                </p>
               </div>
-              <p className="mt-3">
-                "Une assurance simple et efficace, å l'écoute de ses clients.
-                Une équipe trés pro.."
-              </p>
+              <div>
+                <div className="flex justify-between">
+                  <div className="flex space-x-2">
+                    <Avatar>
+                      <AvatarImage
+                        src="https://github.com/shadcn.png"
+                        alt="@shadcn"
+                      />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h1 className="font-semibold">Author</h1>
+                      <p className="text-muted-foreground text-sm">Job Role</p>
+                    </div>
+                  </div>
+                  <div className="flex space-x-1 pr-10">
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star size={20} />
+                  </div>
+                </div>
+                <p className="mt-3 ">
+                  "Réactivité, disponibilité, amabilité, service tip top.."
+                </p>
+              </div>
+              <div>
+                <div className="flex justify-between">
+                  <div>
+                    <h1 className="font-semibold">Google</h1>
+                    <p className="text-muted-foreground text-sm">31/05/2024</p>
+                  </div>
+                  <div className="flex space-x-1 pr-10">
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                    <Star fill="blue" stroke="blue" size={20} />
+                  </div>
+                </div>
+                <p className="mt-3 ">
+                  "Une assurance simple et efficace, å l'écoute de ses clients.
+                  Une équipe trés pro.."
+                </p>
+              </div>
+            </div>
+            <div className="text-blue-500 flex flex-col items-center justify-center mt-2">
+              <Button
+                variant="outline"
+                className="border-blue-500 rounded-full"
+              >
+                <Plus size={20} />
+                <h1 className="ml-2">Voir Plus</h1>
+              </Button>
             </div>
           </div>
         </div>
