@@ -2,6 +2,14 @@ import SimpleTreeMap from "@/components/charts/simple-treemap";
 import StackedAreaChart from "@/components/charts/stacked-area-chart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Plus, Star } from "lucide-react";
 import React from "react";
 
@@ -39,8 +47,30 @@ const EmotionsPage = () => {
               </div>
             </div>
           </div>
-          {/* <StackedAreaChart /> */}
-          <SimpleTreeMap />
+          <Carousel className="w-full h-[350px]">
+            <CarouselContent>
+              <CarouselItem>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex h-[350px] items-center justify-center p-0">
+                      <StackedAreaChart />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex h-[350px] items-center justify-center p-0">
+                      <SimpleTreeMap />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="ml-7" />
+            <CarouselNext className="mr-7" />
+          </Carousel>
         </div>
         <div className="grid grid-cols-2 gap-5 p-5">
           <div className="space-y-5">
