@@ -91,7 +91,7 @@ const EmotionsPage = () => {
                 <li>Rapidité et efficacité du service</li>
                 <li>Amabilité et compétence des conseillers</li>
                 <li>
-                  Facilité d'utilisation des outils en ligne et de l'application
+                  Facilité dutilisation des outils en ligne et de lapplication
                   mobile
                 </li>
                 <li>Prix compétitifs et Offres attractives</li>
@@ -116,8 +116,8 @@ const EmotionsPage = () => {
                   </div>
                 </div>
                 <p className="mt-3 ">
-                  "Une assurance simple et efficace, å l'écoute de ses clients.
-                  Une équipe trés pro.."
+                  Une assurance simple et efficace, å lécoute de ses clients.
+                  Une équipe trés pro..
                 </p>
               </div>
               <div>
@@ -144,7 +144,7 @@ const EmotionsPage = () => {
                   </div>
                 </div>
                 <p className="mt-3 ">
-                  "Réactivité, disponibilité, amabilité, service tip top.."
+                  Réactivité, disponibilité, amabilité, service tip top..
                 </p>
               </div>
               <div>
@@ -162,8 +162,8 @@ const EmotionsPage = () => {
                   </div>
                 </div>
                 <p className="mt-3 ">
-                  "Une assurance simple et efficace, å l'écoute de ses clients.
-                  Une équipe trés pro.."
+                  Une assurance simple et efficace, å lécoute de ses clients.
+                  Une équipe trés pro..
                 </p>
               </div>
             </div>
