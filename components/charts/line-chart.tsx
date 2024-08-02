@@ -108,11 +108,6 @@ const series: Series[] = sortedSeries([
   },
 ]);
 
-interface CombinedData {
-  category: string;
-  [key: string]: number | string | null;
-}
-
 export default class EvolutionLineChart extends PureComponent {
   static demoUrl =
     "https://codesandbox.io/p/sandbox/line-chart-width-multi-series-yyrhrj";

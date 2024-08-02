@@ -36,7 +36,7 @@ export default function RootLayout({
               <SidebarItem
                 icon={<LayoutDashboard size={20} />}
                 text="Dashboard"
-                href="/dashboard"
+                href="/"
               />
               <SidebarItem
                 icon={<UserCircle size={20} />}
