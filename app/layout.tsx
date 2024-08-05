@@ -63,7 +63,7 @@ export default function RootLayout({
                 text="Evolution"
                 href="/evolution"
               />
-              <SidebarItem
+              {/* <SidebarItem
                 icon={<LifeBuoy size={20} />}
                 text="Cloud 3D"
                 href="/cloud3d"
@@ -77,7 +77,7 @@ export default function RootLayout({
                 icon={<LifeBuoy size={20} />}
                 text="Support"
                 href="/support"
-              />
+              /> */}
             </Sidebar>
           </div>
           <div className="flex-1 overflow-y-auto text-black">{children}</div>

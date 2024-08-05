@@ -1,159 +1,124 @@
-'use client'
+"use client";
 
 import React, { PureComponent } from "react";
-import { Treemap, ResponsiveContainer } from "recharts";
+import { Treemap, ResponsiveContainer, Tooltip } from "recharts";
 
+// Define the data structure
 const data = [
-  {
-    name: "axis",
-    children: [
-      { name: "Axes", size: 1302 },
-      { name: "Axis", size: 24593 },
-      { name: "AxisGridLine", size: 652 },
-      { name: "AxisLabel", size: 636 },
-      { name: "CartesianAxes", size: 6703 },
-    ],
-  },
-  {
-    name: "controls",
-    children: [
-      { name: "AnchorControl", size: 2138 },
-      { name: "ClickControl", size: 3824 },
-      { name: "Control", size: 1353 },
-      { name: "ControlList", size: 4665 },
-      { name: "DragControl", size: 2649 },
-      { name: "ExpandControl", size: 2832 },
-      { name: "HoverControl", size: 4896 },
-      { name: "IControl", size: 763 },
-      { name: "PanZoomControl", size: 5222 },
-      { name: "SelectionControl", size: 7862 },
-      { name: "TooltipControl", size: 8435 },
-    ],
-  },
-  {
-    name: "data",
-    children: [
-      { name: "Data", size: 20544 },
-      { name: "DataList", size: 19788 },
-      { name: "DataSprite", size: 10349 },
-      { name: "EdgeSprite", size: 3301 },
-      { name: "NodeSprite", size: 19382 },
-      {
-        name: "render",
-        children: [
-          { name: "ArrowType", size: 698 },
-          { name: "EdgeRenderer", size: 5569 },
-          { name: "IRenderer", size: 353 },
-          { name: "ShapeRenderer", size: 2247 },
-        ],
-      },
-      { name: "ScaleBinding", size: 11275 },
-      { name: "Tree", size: 7147 },
-      { name: "TreeBuilder", size: 9930 },
-    ],
-  },
-  {
-    name: "events",
-    children: [
-      { name: "DataEvent", size: 7313 },
-      { name: "SelectionEvent", size: 6880 },
-      { name: "TooltipEvent", size: 3701 },
-      { name: "VisualizationEvent", size: 2117 },
-    ],
-  },
-  {
-    name: "legend",
-    children: [
-      { name: "Legend", size: 20859 },
-      { name: "LegendItem", size: 4614 },
-      { name: "LegendRange", size: 10530 },
-    ],
-  },
-  {
-    name: "operator",
-    children: [
-      {
-        name: "distortion",
-        children: [
-          { name: "BifocalDistortion", size: 4461 },
-          { name: "Distortion", size: 6314 },
-          { name: "FisheyeDistortion", size: 3444 },
-        ],
-      },
-      {
-        name: "encoder",
-        children: [
-          { name: "ColorEncoder", size: 3179 },
-          { name: "Encoder", size: 4060 },
-          { name: "PropertyEncoder", size: 4138 },
-          { name: "ShapeEncoder", size: 1690 },
-          { name: "SizeEncoder", size: 1830 },
-        ],
-      },
-      {
-        name: "filter",
-        children: [
-          { name: "FisheyeTreeFilter", size: 5219 },
-          { name: "GraphDistanceFilter", size: 3165 },
-          { name: "VisibilityFilter", size: 3509 },
-        ],
-      },
-      { name: "IOperator", size: 1286 },
-      {
-        name: "label",
-        children: [
-          { name: "Labeler", size: 9956 },
-          { name: "RadialLabeler", size: 3899 },
-          { name: "StackedAreaLabeler", size: 3202 },
-        ],
-      },
-      {
-        name: "layout",
-        children: [
-          { name: "AxisLayout", size: 6725 },
-          { name: "BundledEdgeRouter", size: 3727 },
-          { name: "CircleLayout", size: 9317 },
-          { name: "CirclePackingLayout", size: 12003 },
-          { name: "DendrogramLayout", size: 4853 },
-          { name: "ForceDirectedLayout", size: 8411 },
-          { name: "IcicleTreeLayout", size: 4864 },
-          { name: "IndentedTreeLayout", size: 3174 },
-          { name: "Layout", size: 7881 },
-          { name: "NodeLinkTreeLayout", size: 12870 },
-          { name: "PieLayout", size: 2728 },
-          { name: "RadialTreeLayout", size: 12348 },
-          { name: "RandomLayout", size: 870 },
-          { name: "StackedAreaLayout", size: 9121 },
-          { name: "TreeMapLayout", size: 9191 },
-        ],
-      },
-      { name: "Operator", size: 2490 },
-      { name: "OperatorList", size: 5248 },
-      { name: "OperatorSequence", size: 4190 },
-      { name: "OperatorSwitch", size: 2581 },
-      { name: "SortOperator", size: 2023 },
-    ],
-  },
+  { name: "Emotion anger", size: 4 },
+  { name: "Emotion fear", size: 3 },
+  { name: "Emotion joy", size: 2 },
+  { name: "Emotion neutral", size: 1 },
+  { name: "Emotion sad", size: 5 },
+  { name: "Emotion surprise", size: 6 },
 ];
 
-export default class SimpleTreeMap extends PureComponent {
-    static demoUrl =
-      "https://codesandbox.io/p/sandbox/treemap-simple-hslkhr";
-  
-    render() {
-        return (
-            <ResponsiveContainer height={350}>
-              <Treemap
-                width={400}
-                height={200}
-                data={data}
-                dataKey="size"
-                aspectRatio={4 / 3}
-                stroke="#fff"
-                fill="#8884d8"
-              />
-            </ResponsiveContainer>
-          );
-    }
+const colors = [
+  "#1f77b4",
+  "#ff7f0e",
+  "#2ca02c",
+  "#d62728",
+  "#9467bd",
+  "#8c564b",
+];
+
+const CustomTreemapContent: React.FC<any> = ({
+  x,
+  y,
+  width,
+  height,
+  index,
+  payload,
+}) => {
+  const color = colors[index % colors.length];
+
+  return (
+    <g>
+      <rect
+        x={x}
+        y={y}
+        width={width}
+        height={height}
+        style={{
+          fill: color,
+          stroke: "#fff",
+          strokeWidth: 2,
+        }}
+      />
+      <text>
+
+      </text>
+    </g>
+  );
+};
+
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-white p-3 rounded-md">
+        <p className="label font-semibold">{`${label}`}</p>
+        <div className="flex justify-between items-center w-full">
+          <div className="flex space-x-3 items-center">
+            <div className={`h-3 w-3 bg-[#1f77b4]`}></div>
+            <p className="income">Emotion anger</p>
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-full">
+          <div className="flex space-x-3 items-center">
+            <div className={`h-3 w-3 bg-[#ff7f0e]`}></div>
+            <p className="expense">Emotion fear</p>
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-full">
+          <div className="flex space-x-3 items-center">
+            <div className={`h-3 w-3 bg-[#2ca02c]`}></div>
+            <p className="expense">Emotion joy</p>
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-full">
+          <div className="flex space-x-3 items-center">
+            <div className={`h-3 w-3 bg-[#d62728]`}></div>
+            <p className="expense">Emotion neutral</p>
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-full">
+          <div className="flex space-x-3 items-center">
+            <div className={`h-3 w-3 bg-[#9467bd]`}></div>
+            <p className="expense">Emotion sad</p>
+          </div>
+        </div>
+        <div className="flex justify-between items-center w-full">
+          <div className="flex space-x-3 items-center">
+            <div className={`h-3 w-3 bg-[#8c564b]`}></div>
+            <p className="expense">Emotion surprise</p>
+          </div>
+        </div>
+      </div>
+    );
   }
-  
+
+  return null;
+};
+
+export default class SimpleTreeMap extends PureComponent {
+  static demoUrl = "https://codesandbox.io/p/sandbox/treemap-simple-hslkhr";
+
+  render() {
+    return (
+      <ResponsiveContainer height={350}>
+        <Treemap
+          width={400}
+          height={200}
+          data={data}
+          dataKey="size"
+          aspectRatio={4 / 3}
+          stroke="#fff"
+          content={<CustomTreemapContent />}
+        >
+          <Tooltip content={<CustomTooltip />} />
+        </Treemap>
+      </ResponsiveContainer>
+    );
+  }
+}
+

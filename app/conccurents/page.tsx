@@ -155,8 +155,8 @@ const ConccurentPage = () => {
               <label className="flex items-center">
                 <input type="radio" name="gestion_sinistres" className="mr-2" />
                 <h1>
-                  Les avis positifs soulignent la compétence et l'écoute des
-                  conseillers.
+                  Les avis positifs soulignent la compétence et l&apos;écoute
+                  des conseillers.
                 </h1>
               </label>
             </div>
@@ -173,7 +173,9 @@ const ConccurentPage = () => {
               </label>
               <label className="flex items-center">
                 <input type="radio" name="support_client" className="mr-2" />
-                <h1>Les clients mentionnent des temps d'attente prolongés.</h1>
+                <h1>
+                  Les clients mentionnent des temps d&apos;attente prolongés.
+                </h1>
               </label>
             </div>
           </div>
@@ -214,8 +216,8 @@ const ConccurentPage = () => {
               <label className="flex items-center">
                 <input type="radio" name="marketing_vente" className="mr-2" />
                 <h1>
-                  Quelques critiques sur le manque d'informations détaillées
-                  dans les communications.
+                  Quelques critiques sur le manque d&apos;informations
+                  détaillées dans les communications.
                 </h1>
               </label>
             </div>
