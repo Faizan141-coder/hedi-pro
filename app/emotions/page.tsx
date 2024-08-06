@@ -72,7 +72,7 @@ const EmotionsPage = () => {
             <CarouselNext className="mr-7" />
           </Carousel>
         </div>
-        <div className="grid grid-cols-2 gap-5 p-5">
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-5 p-5">
           <div className="space-y-5">
             <div className="flex space-x-2 items-center">
               <h1 className="font-bold text-xl">Sentiment: </h1>

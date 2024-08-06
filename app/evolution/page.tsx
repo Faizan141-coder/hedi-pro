@@ -5,19 +5,17 @@ const EvolutionPage = () => {
   return (
     <div>
       <div className="px-5">
-        <h1 className="pt-5 ml-7 font-bold text-lg text-center">
-          2023 - 2024
-        </h1>
-        <div className="grid grid-cols-2 gap-5 p-5">
+        <h1 className="py-5 font-bold text-lg text-center">2023 - 2024</h1>
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-5 lg:p-5 md:p-0 sm:p-0 p-0">
           <div>
             <SimpleTreeMap />
           </div>
-          <div>
+          <div className="lg:flex md:hidden sm:hidden hidden">
             <SimpleTreeMap />
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5 p-5">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-5 p-5">
         <div className="broder border-transparent shadow-xl rounded-2xl p-5">
           <div className="flex space-x-2 items-center justify-center">
             <div>
@@ -124,6 +122,9 @@ const EvolutionPage = () => {
             </div>
           </div>
         </div>
+        <div className="lg:hidden md:flex sm:flex flex">
+          <SimpleTreeMap />
+        </div>
         <div className="broder border-transparent shadow-xl rounded-2xl p-5">
           <div className="flex space-x-2 items-center justify-center">
             <div>
@@ -156,8 +157,8 @@ const EvolutionPage = () => {
               <label className="flex items-center">
                 <input type="radio" name="gestion_sinistres" className="mr-2" />
                 <h1>
-                  Les avis positifs soulignent la compétence et l&apos;écoute des
-                  conseillers.
+                  Les avis positifs soulignent la compétence et l&apos;écoute
+                  des conseillers.
                 </h1>
               </label>
             </div>
@@ -174,7 +175,9 @@ const EvolutionPage = () => {
               </label>
               <label className="flex items-center">
                 <input type="radio" name="support_client" className="mr-2" />
-                <h1>Les clients mentionnent des temps d&apos;attente prolongés.</h1>
+                <h1>
+                  Les clients mentionnent des temps d&apos;attente prolongés.
+                </h1>
               </label>
             </div>
           </div>
@@ -215,8 +218,8 @@ const EvolutionPage = () => {
               <label className="flex items-center">
                 <input type="radio" name="marketing_vente" className="mr-2" />
                 <h1>
-                  Quelques critiques sur le manque d&apos;informations détaillées
-                  dans les communications.
+                  Quelques critiques sur le manque d&apos;informations
+                  détaillées dans les communications.
                 </h1>
               </label>
             </div>

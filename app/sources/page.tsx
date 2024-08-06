@@ -36,8 +36,8 @@ const data = [
 const SourcesPage = () => {
   return (
     <div className="p-5">
-      <div className="w-full flex">
-        <div className="w-1/3 pr-6">
+      <div className="w-full flex lg:flex-row md:flex-row sm:flex-col flex-col">
+        <div className="lg:w-1/3 md:w-1/2 sm:w-full w-full lg:pr-6 md:pr-6 sm:pr-0 pr-0">
           <h1 className="text-2xl font-semibold">Source</h1>
           <div className="mt-3">
             <Select>
@@ -79,8 +79,10 @@ const SourcesPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-2/3">
-          <h1 className="text-2xl font-semibold">Resume</h1>
+        <div className="lg:w-2/3 md:w-1/2 sm:w-full w-full">
+          <h1 className="text-2xl font-semibold lg:mt-0 md:mt-0 sm:mt-3 mt-3">
+            Resume
+          </h1>
           <div className="relative border border-transparent shadow-xl rounded-2xl p-5 mt-3">
             <h1 className="px-2">
               Avis positif: La majorité des avis (5 étoiles) louent le service
@@ -106,14 +108,16 @@ const SourcesPage = () => {
         </div>
       </div>
 
-      <div className="w-full flex">
-        <div className="py-5 w-1/2">
+      <div className="w-full flex lg:flex-row md:flex-row sm:flex-col flex-col">
+        <div className="py-5 lg:w-1/2 md:w-1/2 sm:w-full w-full">
           <h1 className="font-semibold pb-5">
             Rating Evloution vs Reviews Evolution
           </h1>
-          <SourceChart />
+          <div className="-ml-5 lg:-mr-0 md:-mr-0 sm:-mr-5 -mr-5">
+            <SourceChart />
+          </div>
         </div>
-        <div className="w-1/2 mt-5">
+        <div className="lg:w-1/2 md:w-1/2 sm:w-full w-full mt-5">
           <h1 className="text-2xl pb-2 font-semibold">Recommendations</h1>
           <div className="relative border border-transparent shadow-xl rounded-2xl p-5 mt-3">
             <h1 className="px-2">Réponse rapide et personnalisée</h1>

@@ -33,13 +33,13 @@ const ConccurentPage = () => {
 
   return (
     <div>
-      <div className="pr-10">
-        <h1 className="py-2 ml-7 font-semibold text-lg text-center">
+      <div className="pr-5 -ml-4">
+        <h1 className="py-5 ml-7 font-semibold text-lg text-center">
           Monthly Average Ratings for Direct Assurance and MAIF
         </h1>
         <ConcurrentLineChart />
       </div>
-      <div className="grid grid-cols-2 gap-5 p-5">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-5 p-5">
         <div className="broder border-transparent shadow-xl rounded-2xl p-5">
           <div className="flex space-x-2 items-center justify-between">
             <div>

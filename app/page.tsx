@@ -18,14 +18,16 @@ export default function Home() {
   return (
     <div>
       <div className="w-full p-5">
-        <div className="flex mt-5 w-full">
-          <div className="w-2/3 pr-5">
-            <h1 className="py-2 ml-7 font-normal text-xl">
-              Evolution de la note par plateforme
+        <div className="flex lg:flex-row md:flex-row sm:flex-row flex-col mt-5 w-full">
+          <div className="lg:w-2/3 md:w-2/3 sm:w-2/3 w-full lg:pr-5 md:pr-5 sm:pr-3 pr-0">
+            <h1 className="py-2 font-medium text-xl">
+              Evolution de la note par platform
             </h1>
-            <EvolutionLineChart />
+            <div className="-ml-10">
+              <EvolutionLineChart />
+            </div>
           </div>
-          <div className="w-1/3 mb-5">
+          <div className="lg:w-1/3 md:w-1/3 sm:w-1/3 w-full mb-5">
             <div className="border border-dashed border-[#2e765e] rounded-2xl p-5 h-full">
               <h1 className="text-[#3ea381] text-2xl">Overview</h1>
               <div className="flex justify-between pt-5">
@@ -48,7 +50,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
           <div className="border border-dashed border-[#2e765e] rounded-2xl p-5">
             <h1 className="text-[#3ea381] text-2xl">Concurrents</h1>
             <div className="flex justify-between pt-5">
@@ -108,9 +110,9 @@ export default function Home() {
         </div>
       </div>
       <footer className="border-t h-[65px]">
-        <div className="ml-5 flex space-x-3 items-center h-full">
-          <h1 className="text-xl font-semibold">Sources: </h1>
-          <div className="justify-between flex w-full px-10">
+        <div className="lg:ml-5 md:pl-5 sm:pl-0 pl-0 flex space-x-3 items-center h-full">
+          <h1 className="text-xl font-semibold lg:flex md:flex sm:hidden hidden">Sources: </h1>
+          <div className="justify-between flex w-full lg:px-10 md:px-10 sm:px-5 px-0">
             {sources.map((source, index) => (
               <Image
                 key={index}

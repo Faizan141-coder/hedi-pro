@@ -1,9 +1,31 @@
-import React from "react";
+'use client'
+
+import Example from "@/components/charts/pie-chart";
+import { cn } from "@/lib/utils";
+import React, { useEffect, useState } from "react";
 
 const ThematiquesPage = () => {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the width as needed for mobile
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="grid grid-cols-2 mt-12 ml-5">
-      <div className="border border-[#9747ff] border-dashed rounded-full w-[600px] h-[600px]">
+    <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 mt-12 w-full h-screen">
+      {/* <div className="border border-[#9747ff] border-dashed rounded-full w-[600px] h-[600px]">
         <div className="border border-[#3ea381] bg-[#3ea381] rounded-full bg w-[42%] h-[42%] mt-20 ml-20">
           <h1 className="text-center text-2xl items-center justify-center h-full flex flex-col">
             Support Client <br />
@@ -34,6 +56,12 @@ const ThematiquesPage = () => {
             12%
           </h1>
         </div>
+      </div> */}
+      <div className={cn("h-screen", 
+        isMobile && "h-[500px]"
+      )}>
+      {/* <div className="h-screen"> */}
+        <Example />
       </div>
       <div>
         <div className="space-y-5 px-7">
