@@ -102,7 +102,7 @@ export function SidebarItem({ icon, text, href, alert }: any) {
         />
       )}
 
-      {!expanded && (
+      {/* {!expanded && (
         <div
           className={`
           absolute left-full rounded-md px-2 py-1 ml-6
@@ -113,7 +113,7 @@ export function SidebarItem({ icon, text, href, alert }: any) {
         >
           {text}
         </div>
-      )}
+      )} */}
     </li>
   );
 }

@@ -1,7 +1,36 @@
 import ConcurrentLineChart from "@/components/charts/concurrent-chart";
 import React from "react";
+import { DataTable } from "./components/data-table";
+import { columns } from "./components/columns";
 
 const ConccurentPage = () => {
+  const data = [
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+  ];
+
   return (
     <div>
       <div className="pr-10">
@@ -242,6 +271,10 @@ const ConccurentPage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="p-5 max-w-screen-2xl mx-auto">
+        <DataTable columns={columns} data={data} />
       </div>
     </div>
   );
