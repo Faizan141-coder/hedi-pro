@@ -1,11 +1,10 @@
-'use client'
+"use client";
 
 import Example from "@/components/charts/pie-chart";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
 const ThematiquesPage = () => {
-
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -25,42 +24,7 @@ const ThematiquesPage = () => {
 
   return (
     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 mt-12 w-full h-screen">
-      {/* <div className="border border-[#9747ff] border-dashed rounded-full w-[600px] h-[600px]">
-        <div className="border border-[#3ea381] bg-[#3ea381] rounded-full bg w-[42%] h-[42%] mt-20 ml-20">
-          <h1 className="text-center text-2xl items-center justify-center h-full flex flex-col">
-            Support Client <br />
-            42%
-          </h1>
-        </div>
-        <div className="border border-[#a33e60] bg-[#a33e60] rounded-full bg w-[15%] h-[15%] ml-96 -mt-40">
-          <h1 className="text-center text-xs items-center justify-center h-full flex flex-col">
-            Gesiton des Sinistres <br />
-            15%
-          </h1>
-        </div>
-        <div className="border border-[#a33e60] bg-[#a33e60] rounded-full bg w-[20%] h-[20%] mt-28 ml-32">
-          <h1 className="text-center items-center justify-center h-full flex flex-col">
-            Ventes et Marketing <br />
-            20%
-          </h1>
-        </div>
-        <div className="border border-[#3ea381] bg-[#3ea381] rounded-full bg w-[10%] h-[10%] -mt-24 ml-72">
-          <h1 className="text-center text-xs items-center justify-center h-full flex flex-col">
-            Tech <br />
-            10%
-          </h1>
-        </div>
-        <div className="border border-[#a33e60] bg-[#a33e60] rounded-full bg w-[12%] h-[12%] -mt-16 ml-96">
-          <h1 className="text-center text-xs items-center justify-center h-full flex flex-col">
-            Tarif et facturation <br />
-            12%
-          </h1>
-        </div>
-      </div> */}
-      <div className={cn("h-screen", 
-        isMobile && "h-[500px]"
-      )}>
-      {/* <div className="h-screen"> */}
+      <div className={cn("h-screen", isMobile && "h-[500px]")}>
         <Example />
       </div>
       <div>
