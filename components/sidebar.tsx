@@ -19,11 +19,12 @@ export default function Sidebar({ children }: any) {
       <nav className="h-full flex flex-col bg-white border-r shadow-sm overflow-y-auto">
         <div className="p-4 pb-2 flex justify-between items-center">
           <img
-            src="https://img.logoipsum.com/243.svg"
+            src="/hedi.png"
             className={`overflow-hidden transition-all ${
-              expanded ? "w-32" : "w-0"
+              expanded ? "w-24 ml-1.5" : "w-0"
             }`}
             alt=""
+            width={10}
           />
           <button
             onClick={() => setExpanded((curr) => !curr)}
@@ -32,7 +33,12 @@ export default function Sidebar({ children }: any) {
             {expanded ? (
               <ChevronFirst color="black" />
             ) : (
-              <ChevronLast color="black" />
+              <img
+                src="/hedi-icon.png"
+                className={`overflow-hidden transition-all w-20`}
+                alt=""
+                width={10}
+              />
             )}
           </button>
         </div>
