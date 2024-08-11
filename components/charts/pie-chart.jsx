@@ -24,7 +24,7 @@ const renderCustomizedLabel = ({
       x={x}
       y={y}
       fill="white"
-      textAnchor={x > cx ? 'start' : 'end'}
+      textAnchor="middle"
       dominantBaseline="central"
     >
       {`${data[index].name} ${data[index].value}%`}

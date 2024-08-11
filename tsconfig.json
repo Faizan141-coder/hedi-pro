@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/charts/inner-pie-chart.jsx", "components/charts/outer-pie-chart.jsx", "components/charts/pie-chart.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/charts/inner-pie-chart.jsx", "components/charts/outer-pie-chart.jsx", "components/charts/pie-chart.jsx", "components/charts/simple-treemap.tsx"],
   "exclude": ["node_modules"]
 }
