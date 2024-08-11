@@ -31,6 +31,60 @@ const data = [
     note: "3",
     date: "30/05/2024",
   },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "1",
+    date: "31/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "2",
+    date: "30/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "3",
+    date: "30/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "1",
+    date: "31/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "2",
+    date: "30/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "3",
+    date: "30/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "1",
+    date: "31/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "2",
+    date: "30/05/2024",
+  },
+  {
+    source: "Google",
+    avis: "Une belle note de 0/20 totalement déqu aprés 7 ans de fidélité on mincite de partir de chezeux, les conseillerssont jamais responsable de quoique ce soit des retardset j en passe pour moic est pas du sérieux !",
+    note: "3",
+    date: "30/05/2024",
+  },
 ];
 
 const SourcesPage = () => {
@@ -110,7 +164,7 @@ const SourcesPage = () => {
 
       <div className="w-full flex lg:flex-row md:flex-row sm:flex-col flex-col">
         <div className="py-5 lg:w-1/2 md:w-1/2 sm:w-full w-full">
-          <h1 className="font-semibold pb-5">
+          <h1 className="font-semibold pb-5 text-xl">
             Rating Evloution vs Reviews Evolution
           </h1>
           <div className="-ml-5 lg:-mr-0 md:-mr-0 sm:-mr-5 -mr-5">

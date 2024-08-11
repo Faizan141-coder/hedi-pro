@@ -10,7 +10,6 @@ export type ConcurrentsList = {
   thematique: string;
   periode: string;
   gain: string;
-  financier: string;
 };
 
 export const columns: ColumnDef<ConcurrentsList>[] = [
@@ -65,20 +64,6 @@ export const columns: ColumnDef<ConcurrentsList>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           GAIN
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
-  },
-  {
-    accessorKey: "financier",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          FINANCIER
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );

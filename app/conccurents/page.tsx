@@ -29,6 +29,174 @@ const ConccurentPage = () => {
       gain: "augmentation de larétention et des ventescroisées",
       financier: "",
     },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Integrer descanaux supplémentaires comme Ie chat endirect, les réseauxsociaux et Iesapplications demessagerie pouraméliorerl'accessibilité.",
+      thematique: "Service client",
+      periode: "COURT TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
+    {
+      recommendation:
+        "Mise en place dunsysteme basé sur IlAdanalyse desfeedback des clients",
+      thematique: "Service client",
+      periode: "MOYEN TERME",
+      gain: "augmentation de larétention et des ventescroisées",
+      financier: "",
+    },
   ];
 
   return (

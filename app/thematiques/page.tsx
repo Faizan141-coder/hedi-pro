@@ -25,6 +25,10 @@ const ThematiquesPage = () => {
   return (
     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 mt-12 w-full h-screen">
       <div className={cn("h-screen", isMobile && "h-[500px]")}>
+        <h1 className="text-xl font-bold px-10 -mb-14">Analyse des Retours Clients: thematiques</h1>
+        <div>
+          
+        </div>
         <Example />
       </div>
       <div>
@@ -54,7 +58,7 @@ const ThematiquesPage = () => {
             </ul>
           </div>
           <div>
-            <h1 className="font-extrabold text-xl">Reommendations: </h1>
+            <h1 className="font-extrabold text-xl">Recommendations: </h1>
             <ul className="list-disc list-inside">
               <li>Rapidité et efficacité du service</li>
               <li>Amabilité et compétence des conseillers</li>

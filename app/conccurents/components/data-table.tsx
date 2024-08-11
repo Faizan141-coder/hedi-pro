@@ -8,7 +8,6 @@ import {
   SortingState,
   getSortedRowModel,
   getFilteredRowModel,
-  getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
 
@@ -35,12 +34,12 @@ export function DataTable<TData, TValue>({
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  const [rowCount, setRowCount] = useState<number>(10);
 
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
     onColumnFiltersChange: setColumnFilters,
@@ -51,30 +50,12 @@ export function DataTable<TData, TValue>({
     },
   });
 
+  const handleSeeMore = () => {
+    setRowCount((prev) => prev + 10);
+  };
+
   return (
     <div>
-      {/* <div className="items-center py-4">
-        <div>
-          <h1 className="lg:text-5xl md:text-4xl sm:text-4xl text-3xl font-semibold">
-            Active List
-          </h1>
-        </div>
-        <div className="flex py-4 justify-between">
-          <Input
-            placeholder="Filter active items..."
-            value={
-              (table.getColumn("consigneeName")?.getFilterValue() as string) ??
-              ""
-            }
-            onChange={(event) =>
-              table
-                .getColumn("consigneeName")
-                ?.setFilterValue(event.target.value)
-            }
-            className="max-w-sm bg-white"
-          />
-        </div>
-      </div> */}
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -96,22 +77,25 @@ export function DataTable<TData, TValue>({
             ))}
           </TableHeader>
           <TableBody>
-            {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))
+            {table.getRowModel().rows.slice(0, rowCount).length ? (
+              table
+                .getRowModel()
+                .rows.slice(0, rowCount)
+                .map((row) => (
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && "selected"}
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))
             ) : (
               <TableRow>
                 <TableCell
@@ -126,22 +110,11 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          Previous
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          Next
-        </Button>
+        {rowCount < table.getRowModel().rows.length && (
+          <Button variant="outline" size="sm" onClick={handleSeeMore}>
+            See More
+          </Button>
+        )}
       </div>
     </div>
   );
