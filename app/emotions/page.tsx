@@ -18,39 +18,39 @@ const EmotionsPage = () => {
     <div className="w-full p-5">
       <div className="mb-5">
         <div className="border border-dashed border-[#2e765e] rounded-2xl p-5 h-full">
-          <div className="flex justify-between">
-            <div>
-              <h1 className="py-2 ml-7 font-normal text-xl">
-                Evolution des emotions
-              </h1>
-            </div>
-            <div>
-              <div className="flex justify-start items-center space-x-2">
-                <div className="rounded-full size-3 bg-[#2e765e]" />
-                <h2 className="font-normal text-sm">Colere</h2>
-              </div>
-              <div className="flex justify-start items-center space-x-2">
-                <div className="rounded-full size-3 bg-[#a33e60]" />
-                <h2 className="font-normal text-sm">Joie</h2>
-              </div>
-              <div className="flex justify-start items-center space-x-2">
-                <div className="rounded-full size-3 bg-[#3ea381]" />
-                <h2 className="font-normal text-sm">Neutre</h2>
-              </div>
-              <div className="flex justify-start items-center space-x-2">
-                <div className="rounded-full size-3 bg-[#9747ff]" />
-                <h2 className="font-normal text-sm">Trsite</h2>
-              </div>
-              <div className="flex justify-start items-center space-x-2">
-                <div className="rounded-full size-3 bg-[#d8b684]" />
-                <h2 className="font-normal text-sm">Surprise</h2>
-              </div>
-            </div>
-          </div>
-          <Carousel className="w-full h-[350px]">
+          <Carousel className="w-full h-[450px]">
             <CarouselContent>
               <CarouselItem>
                 <div className="p-1">
+                  <div className="flex justify-between">
+                    <div>
+                      <h1 className="font-normal text-xl">
+                        Evolution des emotions
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-2 pb-5">
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#2e765e]" />
+                        <h2 className="font-normal text-sm">Colere</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#a33e60]" />
+                        <h2 className="font-normal text-sm">Joie</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#3ea381]" />
+                        <h2 className="font-normal text-sm">Neutre</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#9747ff]" />
+                        <h2 className="font-normal text-sm">Trsite</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#d8b684]" />
+                        <h2 className="font-normal text-sm">Surprise</h2>
+                      </div>
+                    </div>
+                  </div>
                   <Card>
                     <CardContent className="flex h-[350px] items-center justify-center p-0">
                       <StackedAreaChart />
@@ -60,6 +60,41 @@ const EmotionsPage = () => {
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
+                  <div className="flex justify-between">
+                    <div>
+                      <h1 className="font-normal text-xl">
+                        Part des emotions
+                      </h1>
+                    </div>
+                    <div className="grid grid-cols-2 pb-5">
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#1f77b4]" />
+                        <h2 className="font-normal text-sm">Emotion anger</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#ff7f0e]" />
+                        <h2 className="font-normal text-sm">Emotion fear</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#2ca02c]" />
+                        <h2 className="font-normal text-sm">Emotion joy</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#d62728]" />
+                        <h2 className="font-normal text-sm">Emotion neutral</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#9467bd]" />
+                        <h2 className="font-normal text-sm">Emotion sad</h2>
+                      </div>
+                      <div className="flex justify-start items-center space-x-2">
+                        <div className="rounded-full size-3 bg-[#8c564b]" />
+                        <h2 className="font-normal text-sm">
+                          Emotion surprise
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
                   <Card>
                     <CardContent className="flex h-[350px] items-center justify-center p-0">
                       <SimpleTreeMap />

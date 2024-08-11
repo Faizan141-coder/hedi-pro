@@ -66,7 +66,7 @@ export default function Home() {
               <h2 className="font-normal text-sm">Postitive</h2>
             </div>
             <div className="flex justify-start items-center space-x-2">
-              <div className="rounded-full size-3 bg-red-500" />
+              <div className="rounded-full size-3 bg-[#e4351e]" />
               <h2 className="font-normal text-sm">Negative</h2>
             </div>
             <RadialBarCharts />

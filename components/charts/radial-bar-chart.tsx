@@ -77,9 +77,10 @@ export default class RadialBarCharts extends PureComponent {
         data={data}
       >
         <RadialBar
-          label={{ position: "insideStart", fill: "#fff" }}
-          background
+          label={{ position: "insideStart", fill: "#000" }}
+          background={{ fill: "#e4351e" }}
           dataKey="uv"
+          fontSize={2}
         />
       </RadialBarChart>
     );
