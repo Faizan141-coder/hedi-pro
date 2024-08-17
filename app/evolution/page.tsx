@@ -1,11 +1,55 @@
+"use client";
+
 import SimpleTreeMap from "@/components/charts/simple-treemap";
-import React from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState } from "react";
 
 const EvolutionPage = () => {
+  const [yearRange, setYearRange] = useState({ start: 2023, end: 2024 });
+
+  // Handle left arrow click to decrement year range
+  const handlePrev = () => {
+    if (yearRange.start > 2015) {
+      setYearRange({
+        start: yearRange.start - 1,
+        end: yearRange.end - 1,
+      });
+    }
+  };
+
+  // Handle right arrow click to increment year range
+  const handleNext = () => {
+    if (yearRange.end < 2030) {
+      setYearRange({
+        start: yearRange.start + 1,
+        end: yearRange.end + 1,
+      });
+    }
+  };
+
   return (
     <div>
       <div className="px-5">
-        <h1 className="py-5 font-bold text-lg text-center">2023 - 2024</h1>
+        {/* Date Selector */}
+        <div className="flex justify-center items-center py-5">
+          <Button
+            onClick={handlePrev}
+            className="p-2 bg-gray-100 hover:bg-gray-200"
+          >
+            <ChevronLeft className="text-black" />
+          </Button>
+          <h1 className="font-bold text-lg mx-5">
+            {yearRange.start} - {yearRange.end}
+          </h1>
+          <Button
+            onClick={handleNext}
+            className="p-2 bg-gray-100 hover:bg-gray-200"
+          >
+            <ChevronRight className="text-black" />
+          </Button>
+        </div>
+        {/* <h1 className="py-5 font-bold text-lg text-center">2023 - 2024</h1> */}
         <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-5 lg:p-5 md:p-0 sm:p-0 p-0">
           <div>
             <SimpleTreeMap />
