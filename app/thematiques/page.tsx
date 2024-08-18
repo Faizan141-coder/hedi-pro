@@ -3,8 +3,8 @@
 import Example from "@/components/charts/pie-chart";
 import { SearchInput } from "@/components/search-input";
 import { cn } from "@/lib/utils";
-// import { sankeyLinkHorizontal } from "d3-sankey";
 import React, { Suspense, useEffect, useState } from "react";
+import { Sankey, Tooltip } from "recharts";
 
 const ThematiquesPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,17 +24,91 @@ const ThematiquesPage = () => {
     };
   }, []);
 
-  // Sample data for the Sankey chart
-  // const nodes = [{ id: "A" }, { id: "B" }, { id: "C" }, { id: "D" }];
+  const MyCustomNode = (props: any) => {
+    const { x, y, width, height, index, payload } = props;
+    const colors = [
+      "#2c3e50", // claims management
+      "#e74c3c", // customer service
+      "#16a085", // general experience
+      "#f39c12", // product & service
+      "#d35400", // marketing & sales
+      "#3498db", // anger
+      "#1abc9c", // disappointment
+      "#2ecc71", // neutral
+      "#9b59b6", // sadness
+      "#f1c40f", // disgust
+      "#e74c3c", // joy
+      "#d35400", // sad
+      "#2980b9", // fear
+      "#f39c12", // 1
+      "#16a085", // 2
+      "#2ecc71", // 3
+      "#9b59b6", // 4
+      "#e74c3c", // 5
+    ];
+  
+    return (
+      <g>
+        <rect
+          x={x}
+          y={y}
+          width={width}
+          height={height}
+          fill={colors[index % colors.length]}
+          stroke="#000"
+          strokeWidth={1}
+        />
+        <text
+          x={x + width}
+          y={y + height / 2}
+          textAnchor="start"
+          dy=".35em"
+          fill="#000"  // Set text color to black
+        >
+          {payload.name}
+        </text>
+      </g>
+    );
+  };
+  
 
-  // const links = [
-  //   { source: "A", target: "B", value: 10 },
-  //   { source: "B", target: "C", value: 15 },
-  //   { source: "C", target: "D", value: 20 },
-  // ];
-
-  // Ensure linkPath function always returns a string
-  // const linkPath = sankeyLinkHorizontal() as (d: any) => string;
+  const data = {
+    nodes: [
+      { name: "claims management" },
+      { name: "customer service" },
+      { name: "general experience" },
+      { name: "product & service" },
+      { name: "marketing & sales" },
+      { name: "anger" },
+      { name: "disappointment" },
+      { name: "neutral" },
+      { name: "sadness" },
+      { name: "disgust" },
+      { name: "joy" },
+      { name: "sad" },
+      { name: "fear" },
+      { name: "1" },
+      { name: "2" },
+      { name: "3" },
+      { name: "4" },
+      { name: "5" },
+    ],
+    links: [
+      { source: 0, target: 5, value: 3 },
+      { source: 0, target: 6, value: 5 },
+      { source: 1, target: 7, value: 7 },
+      { source: 2, target: 8, value: 2 },
+      { source: 2, target: 9, value: 6 },
+      { source: 3, target: 10, value: 5 },
+      { source: 4, target: 11, value: 3 },
+      { source: 4, target: 12, value: 2 },
+      { source: 5, target: 13, value: 1 },
+      { source: 6, target: 14, value: 5 },
+      { source: 7, target: 15, value: 4 },
+      { source: 8, target: 16, value: 3 },
+      { source: 9, target: 17, value: 2 },
+    ],
+  };
 
   return (
     <>
@@ -103,7 +177,22 @@ const ThematiquesPage = () => {
       </div>
       <div className="px-10 pb-10">
         {/* TODO */}
-        {/* Add Sneaky Chart here */}
+        <Sankey
+          width={1200}
+          height={600}
+          data={data}
+          node={<MyCustomNode />}
+          nodePadding={20}
+          margin={{
+            left: 200,
+            right: 200,
+            top: 100,
+            bottom: 100,
+          }}
+          link={{ stroke: "#888", strokeOpacity: 0.4 }} // Adjust the link color and opacity
+        >
+          <Tooltip />
+        </Sankey>
       </div>
     </>
   );
